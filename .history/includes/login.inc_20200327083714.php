@@ -27,7 +27,7 @@
                     $_SESSION["loggedin"] = true;
                     $_SESSION["login_user"] = $username;
                     $_SESSION["id"] = $user["idaccounts"];
-                    header("location: ../welcome.php");
+                    header("location: ./welcome.php");
                 }
                 else{
                     echo "Wrong password";

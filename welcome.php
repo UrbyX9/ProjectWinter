@@ -7,7 +7,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     exit;
 }
 ?>
- 
+ <?template_header('Welcome')?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,5 +26,12 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
         <a href="reset-password.php" class="btn btn-warning">Reset Your Password</a>
         <a href="logout.php" class="btn btn-danger">Sign Out of Your Account</a>
     </p>
+
+    <?php
+    echo '<pre>';
+    var_dump($_SESSION);
+    echo '</pre>';
+    
+    ?>
 </body>
 </html>

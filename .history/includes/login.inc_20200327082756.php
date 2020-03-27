@@ -26,7 +26,7 @@
                     echo "Correct credentials";
                     $_SESSION["loggedin"] = true;
                     $_SESSION["login_user"] = $username;
-                    $_SESSION["id"] = $user["idaccounts"];
+                    $_SESSION["id"] = $stmt["idaccounts"];
                     header("location: ../welcome.php");
                 }
                 else{
@@ -41,6 +41,12 @@
         else{
             echo "Ups... something went wrong!";
         }
+
+        
+
+echo '<pre>';
+var_dump($_SESSION);
+echo '</pre>';
 
     }
    
