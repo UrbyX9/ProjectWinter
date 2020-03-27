@@ -1,8 +1,5 @@
 <?php
-  session_start();
-
 include'./includes/dbh.inc.php';
-
 /*
 function pdo_connect_mysql(){
     /* credentials */

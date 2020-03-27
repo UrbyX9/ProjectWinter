@@ -22,11 +22,10 @@
             $user = $stmt->fetch(PDO::FETCH_ASSOC);
             echo "execute";
             if($stmt->rowCount() == 1){
-                echo "\nuser exists";
                 if ($user['password'] == $password){
                     echo "Correct credentials";
                     $_SESSION["loggedin"] = true;
-                    $_SESSION["username"] = $username;
+                    $_SESSION["login_user"] = $username;
                     header("location: ../welcome.php");
                 }
                 else{
