@@ -9,12 +9,14 @@
         
         <div class="input_item">
             <label>Username:</label>
-            <input type="text" name="username" placeholder="username" required>
+            <input type="text" name="username" placeholder="username"
+                required>
         </div>
         
         <div class="input_item">
             <label>Password:</label>
-            <input type="password" name="password" placeholder="password" required>
+            <input type="password" name="password" placeholder="password" 
+                required>
         </div>
 
         <div class="input_item">

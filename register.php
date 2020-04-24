@@ -6,11 +6,14 @@
 
 <div class="container">
 
+    <h2>Registracija</h2>
+
     <form method="post" action="./includes/registration.inc.php" class="content">
         
         <div class="input_item">
             <lable>Username:</lable>
-            <input type="text" name="username" placeholder="Username" required>
+            <input type="text" name="username" placeholder="Username" required
+                value="<?php echo $username; ?>">
         </div>
         <div class="input_item">
             <label>Email:</label>
@@ -18,7 +21,7 @@
         </div>
         <div class="input_item">
             <label>Password:</label>
-            <input type="password" name="password_1" placeholder="Password" requiredk>
+            <input type="password" name="password_1" placeholder="Password" required>
         </div>
         <div class="input_item">
             <label>Confirm password</label>

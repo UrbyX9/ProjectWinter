@@ -7,7 +7,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     exit;
 }
 ?>
- <?template_header('Welcome')?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,10 +17,11 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <style type="text/css">
         body{ font: 14px sans-serif; text-align: center; }
     </style>
+     <?template_header('Welcome')?>
 </head>
 <body>
     <div class="page-header">
-        <h1>Hi, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>. Welcome to our site.</h1>
+        <h1>Hi, <b><?php echo ($_SESSION['login_user']); ?></b>. Welcome to our site.</h1>
     </div>
     <p> Help me god please help me
         <a href="reset-password.php" class="btn btn-warning">Reset Your Password</a>
