@@ -1,0 +1,5 @@
+function loadCity(){
+    $.ajax({
+        url:
+    })
+}

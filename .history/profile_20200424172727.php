@@ -19,7 +19,7 @@
     
         <div class="input_item">
             <label>Država:</label>
-            <input list="countries" name="country" placeholder="Država" required>
+            <input list="countries" name="country" placeholder="Država">
             <datalist id="countries">
                 <?php
                     
@@ -36,9 +36,6 @@
         <div class="input_item">
             <label>Mesto:</label>
             <input type="text" name="city" placeholder="Mesto" required>
-            <datalist>
-                <
-            </datalist>
         </div>
         <div class="input_item">
             <label>Poštna številka:</label>

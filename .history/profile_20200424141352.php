@@ -7,6 +7,13 @@
         header("location: ./login.php");
         exit;
     }
+
+    $stmt = $pdo->prepare('SELECT * FROM countries');
+    $stmt->execute();
+    
+    $countries = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    
 ?>
 
 <?=template_header('Profile')?>
@@ -19,16 +26,9 @@
     
         <div class="input_item">
             <label>Država:</label>
-            <input list="countries" name="country" placeholder="Država" required>
+            <input list="countries" name="country" placeholder="Država">
             <datalist id="countries">
-                <?php
-                    
-                    $stmt = $pdo->prepare('SELECT * FROM countries');
-                    $stmt->execute();
-                    
-                    $countries = $stmt->fetchAll(PDO::FETCH_ASSOC);
-                    
-                foreach($countries as $item): ?>
+                <?php foreach($countries as $item): ?>
                     <option value="<?=$item['country']?>">
                 <?php endforeach; ?>
                 </datalist>
@@ -36,9 +36,6 @@
         <div class="input_item">
             <label>Mesto:</label>
             <input type="text" name="city" placeholder="Mesto" required>
-            <datalist>
-                <
-            </datalist>
         </div>
         <div class="input_item">
             <label>Poštna številka:</label>
