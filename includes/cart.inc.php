@@ -28,7 +28,7 @@
         }
         // Prevent form resubmission...
         header('location: ./index.php?page=cart');
-        exit;
+        exit();
     }
 
     // remove products from cart, checks for URL param "remove", which is the product id
@@ -54,13 +54,13 @@
         }
         // prevent resubmission
         header('location: ./index.php?page=cart');
-        exit;
+        exit();
     }
 
     // Send the user to the place order page if they click the Place Order button, also the cart should not be empty
     if (isset($_POST['placeorder']) && isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
         header('Location: ./index.php?page=placeorder');
-        exit;
+        exit();
     }
 
     // check session variables for products in cart

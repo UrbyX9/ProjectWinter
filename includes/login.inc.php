@@ -3,6 +3,7 @@
 
     if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
         header("location: ../welcome.php");
+        exit();
     }
 
     include('./dbh.inc.php');
@@ -28,6 +29,7 @@
                     $_SESSION["login_user"] = $username;
                     $_SESSION["id"] = $user["idaccounts"];
                     header("location: ../welcome.php");
+                    exit();
                 }
                 else{
                     echo "Wrong password";
