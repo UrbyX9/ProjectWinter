@@ -78,7 +78,7 @@ function template_header($title){
           <!-- Dropdown -->
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Products
+              Dropdown
             </a>
             <!-- sub dropdown -->
               <ul class="dropdown-menu">
