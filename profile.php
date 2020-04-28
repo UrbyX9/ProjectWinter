@@ -1,11 +1,12 @@
 <?php
     include_once('./functions.php');
-    $pdo = pdo_connect_mysql();
+    #$pdo = pdo_connect_mysql();*/
+    include_once('./includes/country.inc.php');
     session_start();
 
     if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
         header("location: ./login.php");
-        exit;
+        exit();
     }
 ?>
 
@@ -22,12 +23,12 @@
             <input list="countries" name="country" placeholder="Država" required>
             <datalist id="countries">
                 <?php
-                    
+                    /*
                     $stmt = $pdo->prepare('SELECT * FROM countries');
                     $stmt->execute();
                     
                     $countries = $stmt->fetchAll(PDO::FETCH_ASSOC);
-                    
+                    */$countries = country();
                 foreach($countries as $item): ?>
                     <option value="<?=$item['country']?>">
                 <?php endforeach; ?>

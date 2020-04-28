@@ -28,6 +28,10 @@ function template_header($title){
     <meta name="viewport" content="width=device-width, intital-scale=1.0">
 
     <!-- jQuery and Propper.js-->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" 
+    crossorigin="anonymous"></script>
+
     <script src="https://code.jquery.com/jquery-3.4.1.js"
       integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
       crossorigin="anonymous"></script>
