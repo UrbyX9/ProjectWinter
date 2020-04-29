@@ -18,17 +18,17 @@
 
 ?>
 
-<?=template_header('Home')?>
+<?=template_header('Products')?>
 <div class="container">
     <div class="row">
-        <h1>Products</h1>
+        <h1>Izdelki</h1>
         <div class="card-deck">
             <?php foreach($products as $product): ?>
             <div class="card">
                 <a href="./index.php?page=product&id=<?=$product['idproducts']?>" >
                     <img src="./<?=$product['image']?>" alt="<?=$product['name']?>" class="card-img-top">
                     <div class="card-body">
-                        <span class="name"><?=$product['name']?></span>
+                        <span class="product-title"><?=$product['name']?></span>
                         <span class="price">
                             <?=$product['price']?>&euro;
                         </span>

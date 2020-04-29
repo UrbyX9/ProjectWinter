@@ -8,7 +8,7 @@
 <?=template_header('Home')?>
 <div class="container">
     <div class="row">
-        <h1>New products</h1>
+        <h2>Nova izbira</h2>
         <div class="card-deck">
         
             <?php foreach($recent_products as $product): ?>
@@ -18,9 +18,12 @@
                     <div class="card-body hvrbox-layer_top hvrbox-layer_slideup">
                         <p class="card-text hvrbox-text"><?=$product['summary']?></p>
                     </div>
-                    <h5 class="title"><?=$product['name']?></h5>
+                    <span class="product-title"><?=$product['name']?><span>
+                    <span class="price">
+                    <?=$product['price']?>&euro;
+                    </span>
                 </a>
-                
+
             </div>
             <?php endforeach; ?>
         </div>
